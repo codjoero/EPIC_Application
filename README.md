@@ -12,7 +12,7 @@ Also the current work in progress App is on [github pages]
 # App Functionality
 
 | User | Access Level  | Functionality |
-|------|:--------------|--------------:|
+|------|:--------------|:--------------|
 | LF | Create users  | Signup |
 |    | View scores   | Login  |
 |    |               | Create LFAs |
