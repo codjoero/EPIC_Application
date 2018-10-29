@@ -58,3 +58,16 @@ class Score:
                     "scores": user["scores"]
                 })
         return scores
+
+    def get_all_scores(self):
+        """
+        Gets all scores for all bootcampers
+        """
+        scores = []
+        for user in self.users:
+            if user["type"] == "bootcamper":
+                scores.append({
+                    "email": user["email"],
+                    "scores": user["scores"]
+                })
+        return scores
