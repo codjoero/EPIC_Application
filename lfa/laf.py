@@ -28,4 +28,17 @@ class Score:
                 break
         return 1
 
-    
+    def edit_score(self, email, day, new_score):
+        """
+        Modifies scores
+
+        Args:
+            email(str): Uniquely identify a user
+            day(str): Day to assign a score
+            score(int): Score for a given day
+        """
+        for user in self.users:
+            if user["email"] == email:
+                user["scores"][day] = new_score
+                break
+        return 1
