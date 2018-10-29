@@ -8,7 +8,7 @@ class Score:
                 "lfa": "Barna",
                 "scores": {
                     "MON": 3,
-                    "TUE": 4
+                    "TUE": 2
                 }
             }
         ]
@@ -42,3 +42,19 @@ class Score:
                 user["scores"][day] = new_score
                 break
         return 1
+
+    def get_scores(self, lfa):
+        """
+        Retrievs a list of all scores for the LFA's candidates
+
+        Args:
+            lfa(str): Identifies an lfa
+        """
+        scores = []
+        for user in self.users:
+            if user["lfa"] == lfa:
+                scores.append({
+                    "email": user["email"],
+                    "scores": user["scores"]
+                })
+        return scores
