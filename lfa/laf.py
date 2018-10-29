@@ -8,7 +8,7 @@ class Score:
                 "lfa": "Barna",
                 "scores": {
                     "MON": 3,
-                    "TUE": 2
+                    "TUE": 4
                 }
             }
         ]
