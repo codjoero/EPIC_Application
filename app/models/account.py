@@ -11,15 +11,13 @@ class User:
         self.login_time_stamp = ""
         self.logout_time_stamp = ""
 
-    @staticmethod
-    def validate_email_address(email_address):
+    def validate_email_address(self):
         """
         This checks for validity of the email address
-        :param email_address:
         :return:
         """
         email = re.compile("(^[a-zA-Z0-9_-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")
-        match = email.match(email_address)
+        match = email.match(self.email_address)
         if match:
             return True
         else:
