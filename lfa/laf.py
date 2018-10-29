@@ -71,3 +71,17 @@ class Score:
                     "scores": user["scores"]
                 })
         return scores
+
+    def get_bootcamper_score(self, email):
+        """
+        Gets scores for a particular bootcamper
+
+        Args:
+            email(str): Bootcamper identifier
+        """
+        scores = {}
+        for user in self.users:
+            if user["email"] == email:
+                scores = user["scores"]
+                break
+        return scores
